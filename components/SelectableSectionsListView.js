@@ -138,6 +138,7 @@ class SelectableSectionsListView extends Component {
         sectionId={sectionId}
         sectionData={sectionData}
         updateTag={updateTag}
+        enableEmptySections={this.props.enableEmptySections}
       />
     );
   }

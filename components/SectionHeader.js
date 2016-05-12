@@ -13,6 +13,11 @@ class SectionHeader extends Component {
   }
 
   render() {
+    if (this.props.enableEmptySections) {
+      if (!this.props.sectionData.length) {
+        return null;
+      }
+    }
     var SectionComponent = this.props.component;
     var content = SectionComponent ?
       <SectionComponent {...this.props} /> :
